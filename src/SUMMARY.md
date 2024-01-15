@@ -1,3 +1,3 @@
 # Summary
 
-- [Introduction to ZK Cryptography](./intro_zk.md)
+- [Introduction to ZK Proofs](./intro_zk.md)

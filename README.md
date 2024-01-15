@@ -5,6 +5,7 @@ You need to have cargo installed on your system. Then:
 
 ```bash
 $ cargo install mdbook
+$ cargo install mdbook-katex
 ```
 
 And then to open the book:

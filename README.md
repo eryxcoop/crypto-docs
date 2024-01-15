@@ -1,1 +1,14 @@
-# crypto-docs
+# Crypto docs
+The little book of cryptography written by raccoons for raccoons.
+
+You need to have cargo installed on your system. Then:
+
+```bash
+$ cargo install mdbook
+```
+
+And then to open the book:
+
+```bash
+$ mdbook serve --open
+```

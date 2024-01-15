@@ -155,7 +155,7 @@ There are many proving systems. They are very similar between each other. The ma
 ## PCS
 Next, there is a table with the most popular polynomial commitment schemes. **Transparent** refers to the trusted setup, FRI doesn't need trusted setup while KZG does. Succint refers to the succintness of the 
 
-![image](https://hackmd.io/_uploads/rkJLroaua.png)
+![image](images/table_pcs.png)
 
 Minimum data:
 - KZG: It is the most succinct of the PCS, but has a trusted setup. Uses elliptic curve cryptography to "hide" data inside the curve group.

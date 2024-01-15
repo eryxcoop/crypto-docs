@@ -1,3 +1,3 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Introduction to ZK Cryptography](./intro_zk.md)

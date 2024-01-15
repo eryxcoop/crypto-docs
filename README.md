@@ -1,6 +1,8 @@
 # Crypto docs
 The little book of cryptography written by raccoons for raccoons.
 
+![image](raccoons.png)
+
 You need to have cargo installed on your system. Then:
 
 ```bash

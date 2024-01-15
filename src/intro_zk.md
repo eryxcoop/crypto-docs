@@ -46,7 +46,7 @@ This looks confusing at first. Let's see examples of how $R$ and $w$ look like. 
 ## Circuits
 The first strategy is to think about the program as a "hardware circuit". This circuit has sum and multiplication gates. Each gate has inputs and outputs. For example, a sum gate has two inputs `(x, y)` and one output `(z)`. The sum gate enforces the constraint `x + y == z`. Combining several sum and multiplication gates you end up basically with a complex system of constraints $R(x)$:
 
-![image](https://hackmd.io/_uploads/r1tpHA6u6.png)
+![image](../images/intro_zk_circuits.png)
 
 To obtain a feasible solution $\vec{w}$ you can compute the circuit gates. A disadvantage is that circuits are **rigid**. If you want to prove different programs (other than `claim_raccoon_coins`), you have to design a different circuit for each of them. Also, using gates is too low-level. There are tools to recycle common circuits called **gadgets**.
 

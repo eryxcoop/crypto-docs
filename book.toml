@@ -1,5 +1,5 @@
 [book]
-authors = ["Agustin Garassino"]
+authors = ["Agustin Garassino", "Sergio Chouhy", "Carlo Ferrari"]
 language = "en"
 multilingual = false
 src = "src"

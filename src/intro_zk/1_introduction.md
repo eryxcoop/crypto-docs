@@ -6,22 +6,25 @@ Given a hash function $H$ and input $x$, it is easy to obtain $H(x)=y$. But give
 
 Hashes are used in the context of blockchain to prove you own something. For example, someone can put 100 raccoon-coins in a lockbox and say *"Anyone who proves he knows $x$ such that $H(x)=y$, can take this raccoon-coins"*. Suppose you know $x$. Great! You can claim this juicy coins. But what happens if you want to keep $x$ secret to avoid someone else using $x$ for future claims?
 
-If would be nice if you could run the following program privately in your computer:
+It would be nice if you could run the following program in your computer:
 
 ```python
+from hash import H
+
 def claim_raccoon_coins(x):
-    y = "0xFF081CAFE"
+    # Returns True if user knows the preimage of x.
+    y = "0xFF081CAFE" 
     return H(x) == y
 ```
 
-And generate a proof that convinces others that you executed that particular program and it returned `True`, without revealing your secret $x$.
+And generate a proof that convinces anyone that you run the program and it returned `True`. You wouldn't reveal your secret $x$, because you run the program privately on your computer.
 
-Zero knowledge proving systems consist of a prover $P$ and a verifier $V$. First, the prover and the verifier agree on some specific computer program. Then the prover sends to the verifier a proof $\pi$ and a result $r$. This proof convinces $V$ that $P$ has executed the agreed program and it returned $r$. It is called a *zero knowledge* proof because it does not reveal any sensitive information. The prover can use secret input parameters and the values of the local variables are not revealed to the verifier. The verifier only knows the instructions and constants, that is, the "text" of the agreed program.
+Zero knowledge proving systems consist of a prover $P$ and a verifier $V$. First, the prover and the verifier agree on some specific computer program. Then the prover sends to the verifier a **proof** $\pi$ and a result $r$. This proof convinces $V$ that $P$ has executed the agreed program and it returned $r$. It is called a *zero knowledge* proof because it does not reveal any sensitive information. The prover can use secret input parameters and the values of the local variables are not revealed to the verifier. The verifier only knows the instructions and constants, that is, the "text" of the agreed program.
 
 It is desirable that the proof size is small and easy to verify. This property is called **succinctness**. A common term used in ZK is **zkSNARK**, this stands for zero knowledge succint argument of knowledge.
 
 ## General strategy
-At first it is hard to image how can $V$ be convinced. Let's break down how a ZK proving system works. There are two main components:
+At first it is hard to imagine how to convince $V$. Specially considering $V$ will never see the content of the variables throughout the execution. Let's break down how a ZK **proving system** works. There are two main components:
 - Arithmetization
 - Polynomial commitment scheme
 

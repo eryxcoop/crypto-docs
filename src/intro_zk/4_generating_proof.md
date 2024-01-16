@@ -26,7 +26,7 @@ A good prover knows the correct witness $\vec{w}$, because it has executed the p
 Note: The name of the phases are not common to ZK literature, they where chosen in this text for educational purposes.
 ## Why it works
 ### Commitmment phase
-In the commitment phase the prover computes a polynomial $Z(x)$ called the **zerofier**. $Z(x)$ encodes all the roots $\omega, \omega^2, \dots$ we want our polynomial $R(w(x))$ to have. Note that $R(w(\omega^i))=0$ for all $i$ if and only if $\vec{w}$ is a valid witness for the program logic encoded in $R$. If $P$ is a good prover with a valid witness, then $H(x)$ such that $R(w(x))=H(x)Z(x)$ can be computed, because $Z(x)$ divides exactly $R(w(x))$. After that, the prover commits $w(x)$ and $H(x)$ and cannot change them anymore. Note that $[W], [H]$ do not reveal any information about the polynomials. These are only commitments.
+In the commitment phase the prover computes a polynomial $Z(x)$ called the **zerofier**. $Z(x)$ has all the roots $\omega, \omega^2, \dots$ we want our polynomial $R(w(x))$ to have. Note that $R(w(\omega^i))=0$ for all $i$ if and only if $\vec{w}$ is a valid witness for the program logic encoded in $R$. If $P$ is a good prover with a valid witness, then $H(x)$ such that $R(w(x))=H(x)Z(x)$ can be computed, because $Z(x)$ divides exactly $R(w(x))$. After that, the prover commits $w(x)$ and $H(x)$ and cannot change them anymore. Note that $[W], [H]$ do not reveal any information about the polynomials. These are only commitments.
 
 ### Challenge phase
 In the challenge phase, $V$ sends a challenge $z$. A **challenge** it's just a random field element, that $P$ cannot know in advance. Note that $P$ has committed to $w(x)$ and $H(x)$ before knowing $z$. $P$ cannot have used $z$ to craft malicious polynomials during the commitment phase. Now, using the PCS, $P$ can send the values $w(z), H(z)$ and the proof, without revealing any additional information of the polynomial. Special care must be taken, because $V$ could choose $z$ in order to reveal secret values of $w(z)$. For this purpose, $z$ is normally chosen out of the domain $\omega^i$.
@@ -40,7 +40,15 @@ First of all, $V$ uses the PCS to verify the points $H(z)$ and $w(z)$ come from 
 The protocol we showed is interactive, in the sense that $P$ and $V$ talk to each other. We can make this protocol non-interactive if we can get $P$ to output the complete proof $\pi$ without asking $V$ for a challenge $z$. The challenge step is sometimes replaced with a trick called the **Fiat-Shamir** heuristic. This is just a way for $P$ to sample randomness without asking $V$ for it. For this to work, $P$ uses the unpredictable output of a hash function over things $P$ can't control: the public input, the result of the commitments, etc... The structure used in the algorithms to deliver this randomness is sometimes called the **transcript**.
 
 # Auxiliary arguments
-There are some common "auxiliary" proofs that are helpful when designing proving systems.
+There are some common auxiliary proofs that are helpful when designing proving systems. For example, you could use a mix of circuits, a PCS and some of the stuff you'll see in this section, to get a more powerful proving system.
 
 ### Permutation argument
-The permutation argument is a zk proof on itself. The goal of this argument is to convince $V$ that two sets $S_1, S_2$ contain the same elements, without revealing its contents.
+The permutation argument is a zk proof on itself. The goal of this argument is to convince $V$ that two sets $S=\{s_1, \dots, s_n\}$, $T=\{t_1, \dots, t_n\}$ contain the same elements, without revealing their content. As before, the permutation argument will consist of a constraint system. We'll use the fact that:
+
+$$S=T \iff s(x)=t(x)$$
+
+where $s(x)=\prod_{i=1}^n (x-s_i)$ and $t(x)=\prod_{i=1}^n (x-t_i)$. That is because the roots of a polynomial uniquely indentify it. It is good that we have polynomials, because as we've already learned, we want to create a system of polynomial constraints in order to make a zk-proof. Note that:
+
+$$s(x)=t(x) \iff \prod s(x)/t(x) = 1$$
+
+

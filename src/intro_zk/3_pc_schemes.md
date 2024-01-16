@@ -1,9 +1,9 @@
 # Polynomial commitment scheme
-In this protocol, the prover commits to a polynomial $p$ without revealing any information about $p$ to $V$. We say a PCS is **binding** because the prover can't change the polynomial $p$ once he has commited to it (otherwise $V$ would notice). A commitment is also **hiding** because it doesn't reveal unintended information about $p$ to $V$.
+Polynomial commitment schemes are protocols between the prover and the verifier. In this protocol, $P$ commits to a polynomial $p$ without revealing any information about $p$ to $V$. We say a **PCS** is **binding** because the prover can't change the polynomial $p$ once he has commited to it (otherwise $V$ would notice). A commitment is also **hiding** because it doesn't reveal unintended information about $p$ to $V$.
 
 A normal exchange between $P$ and $V$ would include three operations called $\text{commit}$, $\text{open}$ and $\text{verify}$. Suppose $P$ and $V$ want to have an interaction over some polynomial $t(x)$:
-- `[T] := commit(t)`: the prover computes $[T]$, the commitment of $t(x)$,  and sends it to $V$. From now on, $P$ can't change $t(x)$ without $V$ noticing. (For now you can see $[T]$ as a big number with special properties)
-- `proof, t_z := open(t, z)`: the verifier still does not know anything about $t(x)$, but he wants to know $t(z)$. So the prover computes $t(z)$ and a `proof` to convince $V$.
+- `[T] := commit(t)`: the prover computes $[T]$, the commitment of $t(x)$,  and sends it to $V$. From now on, $P$ can't change $t$ or lie about values $t(x)$ without $V$ noticing. We'll see why this is useful later. At the moment, you can see $[T]$ as a big number with special properties.
+- `proof, t_z := open(t, z)`: the verifier still doesn't know anything about $t(x)$, but he wants to know $t(z)$ for a particular $z$. So the prover computes $t(z)$ and a `proof` to convince $V$.
 - `verify(proof, t_z, [T])`: $V$ verifies that $t_z = t(z)$. The verifier can keep asking the prover to "reveal" the value of $t(x)$ at several points, and $P$ can't lie about them, they will always come from the same polynomial $t(x)$.
 
 ## Batch commitments

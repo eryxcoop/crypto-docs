@@ -17,4 +17,4 @@ Example:
 ## Trusted setup
 Some polynomial schemes require a **trusted setup**. This is a ceremony that generate keys $V_k, P_k$ for the prover and the verifier. These keys are needed for the PCS to work. Generally, a **trusted** third party creates some secret $s$ and generates $V_k, P_k$ from $s$. Then $s$ **MUST** be thrown away and is called the **toxic waste**. 
 
-Next we'll how arithmetization and PCS are used together to generate a ZK proof.
+Next we'll see how arithmetization and PCS are used together to generate a ZK proof.

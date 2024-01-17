@@ -65,4 +65,4 @@ $$
 The selector $s(x)$ defines whether $A$ or $B$ will be equal to $C$.,
 
 ## Nothing matters
-Although this two arithmetization strategies (circuits and execution trace) may seem different, note that both just end up being a system of polynomial constraints $R(\vec{x})$. This system is sometimes called **R1CS** (Rank one constraint system). Having these polynomials in $R$ is good, because we need them for our next step: the polynomial commitment scheme.
+Although this two arithmetization strategies (circuits and execution trace) may seem different, note that both just end up being a system of polynomial constraints $R(\vec{x})$. This system is sometimes called **R1CS** (Rank one constraint system) depending on its form. Having these polynomials in $R$ is good, because we need them for our next step: the polynomial commitment scheme.

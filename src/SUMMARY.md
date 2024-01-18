@@ -9,7 +9,7 @@
 - [Polynomial commitment schemes](./pcs/1_introduction.md)
 - [Bobo VM](./bobo_vm.md)
 
-- [Blockchain]()
+- [Blockchain](./blockchain/main.md)
     - [Ethereum](./blockchain/ethereum.md)
     - [Starknet](./blockchain/starknet.md)
     - [Aztec](./blockchain/aztec.md)

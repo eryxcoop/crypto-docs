@@ -15,7 +15,7 @@ A good prover knows the correct witness $\vec{w}$, because it has executed the p
 3. Commit witness: $P$ sends $[W]=\text{commit}(w)$ to $V$.
 4. Commit quotient: $P$ sends $[H]=\text{commit}(H)$ to $V$.
 ### Challenge and open phase
-5. $V$ sends a challenge $z$ to $V$.
+5. $V$ sends a challenge $z$ to $P$.
 6. $P$ opens $H(z), w(z)$ and sends the proofs and results to $V$.
 
 ### Verify phase

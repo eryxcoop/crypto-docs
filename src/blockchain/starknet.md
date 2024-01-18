@@ -8,7 +8,7 @@ An L2 layer is a blockchain that runs in parallel to Ethereum. Transactions can 
 
 A good strategy to do this is to use *zero knowledge*. L2 layers using zk to reduce transaction costs in L1, are sometimes called *zk rollups*.
 
-![image](images/starknet_archi.png)
+![image](../images/starknet_archi.png)
 
 The strategy to do so is the following:
 1. Alice wants to reduce the fees she's paying for ethereum transactions.
@@ -23,4 +23,3 @@ The state of starknet is encoded in the root of a merkle tree. When transactions
 The contracts in Starknet are written in a language called **Cairo**. The specifications of this language have been translated to a system of polynomial constraints, also called AIR (Arithmetic intermediate representation). This constraints can be used to apply a polynomial commitment scheme to produce zk-proofs. The PCS used in starknet is called FRI, and the prover is called Stark prover, because it follows the Stark protocol. This protocol was inventend in part by Eli Ben Sasson, the co-founder and CEO of Starknet.
 
 The transactions are executed twice*. The first time to check that it is a well-formed program, in the sense that it complies with the starknet protocol and it doesn't throw a runtime exception. After this first execution, an execution trace is generated, then a proof can be made out of this.
-}

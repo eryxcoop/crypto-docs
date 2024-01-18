@@ -7,8 +7,9 @@
     - [Generating the proof](./intro_zk/4_generating_proof.md)
     - [Other arguments](./intro_zk/5_other_arguments.md)
 - [Polynomial commitment schemes](./pcs/1_introduction.md)
-- [Aztec test](./aztec.md)
 - [Bobo VM](./bobo_vm.md)
 
 - [Blockchain]()
     - [Ethereum](./blockchain/ethereum.md)
+    - [Starknet](./blockchain/starknet.md)
+    - [Aztec](./blockchain/aztec.md)

@@ -7,12 +7,12 @@ The good thing about elliptic curves is that you can define an operation $+$ and
 
 ![image](../images/curve.png)
 
-The point $R$ is $-(P+Q)$. And the inverse of a point, is just the mirror image respect to the $x$ axis. So $P+Q$ is the mirror point of the point $R$ where the line $PQ$ intersects the curve a third time. The cool thing about elliptic curves, is that you have a guarantee that when you take two different points, the line will intersect in a third point. There are some special cases for when you take a point and its inverse, and you take the same point twice $P+P$. This cases form a vertical line, and we say this line also intersects with the neutral element $0$.
+*The point $R$ is $-(P+Q)$. And the inverse of a point, is just the mirror image respect to the $x$ axis. So $P+Q$ is the mirror point of the point $R$ where the line $PQ$ intersects the curve a third time. The cool thing about elliptic curves, is that you have a guarantee that when you take two different points, the line will intersect in a third point. There are some special cases: when you take a point and its inverse, and when you take the same point twice $P+P$. This cases form a vertical line, and we say this line also intersects with the point at infinity $0$. This point, is also the neutral element.
 
 When adding a point with itself a number of times, we'll use the following notation: $3P=P+P+P$.
 
 ## Curves over finite fields
-We are interested in curves where $x, y \in \mathbb{F}_p$. We'll note the points in the curve $E(\mathbb{F_p})$. Here, things get more caotic:
+We are interested in curves where $x, y \in \mathbb{F}_p$. We'll note the points in the curve $E(\mathbb{F_p})$. Here, when we plot the points $(x, y)$ for a specific curve, things get more caotic:
 
 ![image](../images/curves_2.png)
 
@@ -39,4 +39,4 @@ $$e(xA, yB)=t^{ab}$$
 
 This property is crazy. It states that adding $A$ with itself one more time, is equivalent to multiplying $t$ with itself in $\mathbb{F}_q$ one more time. It mixes two different worlds. The main algorithm for computing pairings is divided in two steps the **Miller loop** and the **final exponentiation**. Most optimizations efforts use properties of specific curves in order to reduce the size of the loop or the exponentiation.
 
-TODO: talk about G1, G2, and field extensions.
+TODO: talk about G1, G2, and field extensions. Maybe do a chapter specific to curves, and keep this more simple.

@@ -3,7 +3,7 @@ Elliptic curves are defined by two parameters $a, b$. We say a point $(x, y)$ be
 
 $$y^2=x^3+ax+b$$
 
-The good thing about an elliptic curves is that you can define an operation $+$ and a neutral element noted $0$. The points of the curve and this operation form a group $\mathbb{G}$. If you take $x,y \in \mathbb{R}$ the addition of points $P$ and $Q$ has a geometric interpretation:
+The good thing about elliptic curves is that you can define an operation $+$ and a neutral element noted $0$. The points of the curve and this operation form a group $\mathbb{G}$. If you take $x,y \in \mathbb{R}$ the addition of points $P$ and $Q$ has a geometric interpretation:
 
 ![image](../images/curve.png)
 

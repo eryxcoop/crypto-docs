@@ -1,6 +1,9 @@
 # Summary
 [Foreword](foreword.md)
 
+- [Introduction to cryptography](./crypto/introduction.md)
+    - [Math intro](./crypto/math.md)
+    - [Diffie Hellman](./crypto/diffie.md)
 - [Introduction to ZK Proofs](./intro_zk/1_introduction.md)
     - [Arithmetization](./intro_zk/2_arithmetization.md)
     - [Polynomial commitment schemes](./intro_zk/3_pc_schemes.md)
@@ -12,5 +15,4 @@
     - [Aztec](./blockchain/aztec.md)
 - [Polynomial commitment schemes](./pcs/1_introduction.md)
 - [Bobo VM](./bobo_vm.md)
-
-
+- [More resources](./resources.md)

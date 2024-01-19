@@ -10,7 +10,7 @@
 A good encryption algorithm must hold the property that no one observing $c$ can obtain $m$, even knowing $D$ and $E$. That is, cryptographers assume everyone knows the algorithm (but not the secret $s$). This is known as the **Kerckhoffs principle**.
 
 ## Diffie Hellman
-But how can Alice and Bob agree on a secret $s$ securely if they live far away? Diffie-Hellman introduced a solution for this problem in a paper from 1976. Their protocol uses multiplicative groups to agree on a random number $s$ securely.
+How can Alice and Bob agree on a secret $s$ securely if they live far away? Diffie-Hellman introduced a solution for this problem in a paper from 1976. Their protocol uses multiplicative groups to agree on a random number $s$ securely.
 
 Setup: Alice and Bob agree on a finite group $\mathbb{G}$ and a generator $g$.
 1. Alice samples a random $a$ and computes $A=g^a$.

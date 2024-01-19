@@ -37,4 +37,6 @@ Do not get confused, we have two different finite fields. $\mathbb{F}_p$ is the 
 
 $$e(xA, yB)=t^{ab}$$
 
-This property is crazy. It states that adding $A$ with itself one more time, is equivalent to multiplying $t$ with itself in $\mathbb{F}_q$ one more time. It mixes two different worlds.
+This property is crazy. It states that adding $A$ with itself one more time, is equivalent to multiplying $t$ with itself in $\mathbb{F}_q$ one more time. It mixes two different worlds. The main algorithm for computing pairings is divided in two steps the **Miller loop** and the **final exponentiation**. Most optimizations efforts use properties of specific curves in order to reduce the size of the loop or the exponentiation.
+
+TODO: talk about G1, G2, and field extensions.

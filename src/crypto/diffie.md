@@ -22,7 +22,7 @@ Setup: Alice and Bob agree on a finite group $\mathbb{G}$ and a generator $g$.
 
 Note that $B^a=(g^b)^a=(g^a)^b=A^b=s$. So Alice and Bob reached to the same random number $s$.
 
-This algorithm will be secure algorithm depending on the chosen group $\mathbb{G}$. For some groups, computing $A=g^a$ is easy if you know $a$, but computing $a$ if you know $A$ and $g$ is hard. This is called the **Discrete Logarithm Problem** (the notation $a=\log_g(A)$ is not used, but you can see where the name comes from). This is why groups are useful in cryptography. You can use the fact that the discrete logarithm problem is hard, to "hide" stuff inside a group.
+The security of the algorithm depends on the chosen group $\mathbb{G}$. For some groups, computing $A=g^a$ is easy if you know $a$, but computing $a$ if you know $A$ and $g$ is hard. This is called the **Discrete Logarithm Problem** (the notation $a=\log_g(A)$ is not used, but you can see where the name comes from). This is why groups are useful in cryptography. You can use the fact that the discrete logarithm problem is hard, to "hide" stuff inside a group.
 
 In step 1, Alice "hides" $a$ in the group by computing $g^a$. Then sending $A$ is safe if we assume the attackers cannot solve the discrete logarithm problem. Nowadays, is safe to assume this if we use $F_p$ for a really big $p$. But choosing a secure group $\mathbb{G}$ is a delicate decision. As hardware and algorithms get better, encryption algorithms have to keep up with it. Other groups such as those found on **elliptic curves** have become more popular for having a more difficult discrete logarithm problem.
 

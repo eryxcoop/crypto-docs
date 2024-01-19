@@ -3,9 +3,9 @@
 **Simmetric cryptography** algorithms are used to send secret messages between two parts $A$ and $B$. In the literature, $A$ and $B$ are usually called Alice and Bob. Alice and Bob first agree on a secret key $s$, an encryption function $E$ and a decryption function $D$. Then we have the following protocol:
 
 1. Alice wants to send $m$ to Bob.
-2. Alice computes $c=E(m, s)$.
+2. Alice encrypts $c=E(m, s)$.
 3. Alice sends $c$ to Bob.
-4. Bob computes $m=D(c, s)$
+4. Bob recovers $m=D(c, s)$
 
 A good encryption algorithm must hold the property that no one observing $c$ can obtain $m$, even knowing $D$ and $E$. That is, cryptographers assume everyone knows the algorithm (but not the secret $s$). This is known as the **Kerckhoffs principle**.
 

@@ -23,9 +23,11 @@ Zcash is the blockchain that implements the Zerocash [protocol](https://zips.z.c
 
 
 # References
-- [Zerocoin's paper](https://zerocoin.org/media/pdf/ZerocoinOakland.pdf).
-- [Zerocash's paper](https://eprint.iacr.org/2014/349.pdf).
-- [Zcash protocol](https://zips.z.cash/protocol/protocol.pdf)
-- [BCTV14](https://eprint.iacr.org/2013/879.pdf)
-- [Groth16](https://eprint.iacr.org/2016/260.pdf)
-- [Halo](https://eprint.iacr.org/2019/1021.pdf) and [Halo2](https://zcash.github.io/halo2/index.html?search=)
+- [Zerocoin](https://zerocoin.org/media/pdf/ZerocoinOakland.pdf).
+- [Zerocash](https://eprint.iacr.org/2014/349.pdf).
+- [Pinocchio](https://eprint.iacr.org/2013/279.pdf).
+- [Zcash 2023 protocol](https://zips.z.cash/protocol/protocol.pdf).
+- [BCTV14](https://eprint.iacr.org/2013/879.pdf).
+- [Groth16](https://eprint.iacr.org/2016/260.pdf).
+- [Halo](https://eprint.iacr.org/2019/1021.pdf) and [Halo2](https://zcash.github.io/halo2).
+- [CVE-2019-716](https://nvd.nist.gov/vuln/detail/CVE-2019-7167).

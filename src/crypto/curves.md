@@ -35,7 +35,7 @@ $$e(A, B)=t$$
 
 Do not get confused, we have two different finite fields. $\mathbb{F}_p$ is the field where the coordinates of the points live. $\mathbb{F}_q$ is the field where things end up after the pairing, this field has the same order as the group $\mathbb{G}$ of the curve. The pairing has a property called bilinearity:
 
-$$e(xA, yB)=t^{ab}$$
+$$e(xA, yB)=t^{xy}$$
 
 This property is crazy. It states that adding $A$ with itself one more time, is equivalent to multiplying $t$ with itself in $\mathbb{F}_q$ one more time. It mixes two different worlds. The main algorithm for computing pairings is divided in two steps the **Miller loop** and the **final exponentiation**. Most optimizations efforts use properties of specific curves in order to reduce the size of the loop or the exponentiation.
 

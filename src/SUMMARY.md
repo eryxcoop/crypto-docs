@@ -17,5 +17,6 @@
     - [Aztec](./blockchain/aztec.md)
     - [Zcash](./blockchain/zcash.md)
 - [Polynomial commitment schemes](./pcs/1_introduction.md)
+- [Miscellaneous](./misc/elliptic_curves_cyrstal.md)
 - [Bobo VM](./bobo_vm.md)
 - [More resources](./resources.md)

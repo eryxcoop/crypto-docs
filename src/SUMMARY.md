@@ -15,6 +15,7 @@
     - [Ethereum](./blockchain/ethereum.md)
     - [Starknet](./blockchain/starknet.md)
     - [Aztec](./blockchain/aztec.md)
+    - [Zcash](./blockchain/zcash.md)
 - [Polynomial commitment schemes](./pcs/1_introduction.md)
 - [Bobo VM](./bobo_vm.md)
 - [More resources](./resources.md)

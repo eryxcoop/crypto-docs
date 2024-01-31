@@ -15,3 +15,8 @@ And then to open the book:
 ```bash
 $ mdbook serve --open
 ```
+
+
+## Contributing
+
+If you want to contribute, just add your ```.md``` files in the apropriate folder under ```.src/``` and add its path in the ```SUMMARY.md``` file.

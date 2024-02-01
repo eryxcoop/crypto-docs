@@ -1,3 +1,2 @@
 # Plonk
-The [plonk paper](https://eprint.iacr.org/2019/953.pdf) is well written and the protocol is described in section 8.3. Also, this [lambdaclass blogpost](https://blog.lambdaclass.com/all-you-wanted-to-know-about-plonk/) is very good.
-
+The [plonk paper](https://eprint.iacr.org/2019/953.pdf) is well written and the protocol is described in section 8.3. Also, this [lambdaclass blogpost](https://blog.lambdaclass.com/all-you-wanted-to-know-about-plonk/) is very good. A more concise description is found in section V of this [paper](https://eprint.iacr.org/2023/691.pdf).
